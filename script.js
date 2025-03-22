@@ -2,7 +2,7 @@ let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let gameOver = false;
 
-// Function to handle cell click
+
 function handleCellClick(event) {
     if (gameOver) return;
 
@@ -16,7 +16,6 @@ function handleCellClick(event) {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 }
 
-// Function to check for win
 function checkForWin() {
     const winConditions = [
         [0, 1, 2],
@@ -46,7 +45,7 @@ function checkForWin() {
     }
 }
 
-// Function to reset game
+
 function resetGame() {
     gameBoard = ['', '', '', '', '', '', '', '', ''];
     currentPlayer = 'X';
@@ -56,7 +55,7 @@ function resetGame() {
     cells.forEach(cell => cell.textContent = '');
 }
 
-// Add event listeners to cells and reset button
+
 const cells = document.querySelectorAll('.cell');
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
 
